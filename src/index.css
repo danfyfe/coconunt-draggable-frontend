@@ -167,6 +167,10 @@ code {
   animation-iteration-count: infinite; */
 }
 
+.coconut {
+  height: 8vh;
+}
+
 .full-coconut:hover {
   cursor: pointer;
 }

@@ -11,3 +11,509 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color: #edd793; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* @font-face {
+  font-family: gilligan;
+  src: url(./fonts/GILLIGAN.TTF);
+} */
+
+#coconut {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+  .full-coconut, .falling {
+    left: 53vw !important;
+  }
+
+  .left-half {
+    left: 48vw !important;
+  }
+
+  .right-half {
+    left: 58vw !important;
+    transform: rotate(-90deg);
+  }
+
+  .title-text {
+    left: 38vw !important;
+    font-size: 500% !important;
+  }
+
+  /* .flamingo {
+    left: -20vw !important;
+  } */
+
+  #fish-water {
+    width: 10%;
+  }
+
+}
+
+
+.sky {
+  /* background-color: #d2e2e1; */
+  background-color: #defaf8;
+  height: 40vh;
+}
+
+.sun {
+  background-color: #FDB813;
+  height: 20vh;
+  width: 20vh;
+  border-radius: 50%;
+  margin: 2%;
+}
+
+.water {
+  /* background-color: #1f9fa9; */
+  background-color: #2db8c2;
+  height: 15vh;
+}
+
+.wave {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  color: white;
+}
+
+.tide {
+  background-color: #2db8c2;
+  height: 10px;
+  /* animation-name: tide;
+  animation-duration: 10s;
+  animation-iteration-count: infinite; */
+  border-bottom: 1px solid transparent;
+}
+
+@keyframes tide {
+
+  0% {
+    height: 0px;
+    border-bottom: none;
+    /* border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; */
+    border-bottom: 1px solid transparent;
+  }
+
+
+  50% {
+    height: 25px;
+    opacity: 1;
+    border-bottom: 1px solid white;
+  }
+
+  75% {
+    border-bottom: 10px solid white;
+  }
+
+  100% {
+    height: 0px;
+    opacity: 0;
+    /* border-bottom: 20px solid white; */
+  }
+
+}
+
+.sand {
+  position: relative;
+  background-color: #edd793;
+  height: 45vh;
+}
+
+.more-sand {
+  position: relative;
+  background-color: #edd793;
+  height: 200vh;
+}
+
+.tree-container {
+}
+
+#coconut-tree {
+  height: 50vh;
+  position: absolute;
+  left: 50vw;
+  bottom: 25vh;
+}
+
+.full-coconut {
+  height: 8vh;
+  position: absolute;
+  left: 60vw;
+  bottom: 55vh;
+  /* animation-name: shake;
+  animation-duration: 2.5s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite; */
+}
+
+.full-coconut:hover {
+  cursor: pointer;
+}
+
+@keyframes shake {
+  0% {
+    -ms-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  15% {
+    -ms-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+.falling {
+  height: 8vh;
+  position: absolute;
+  left: 60vw;
+  bottom: 55vh;
+  animation-name: drop-coconut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes drop-coconut {
+  0% {
+    bottom: 55.5vh;
+  }
+  100% {
+    bottom: 21vh;
+  }
+}
+
+.half-coconut {
+  height: 8vh;
+  position: absolute;
+  bottom: 22vh;
+}
+
+.left-half {
+  left: 55vw;
+}
+
+.right-half {
+  left: 70vw;
+  transform: rotate(-90deg);
+}
+
+.portfolio-container {
+  position: absolute;
+  /* height: 100%; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 3vh auto;
+  z-index: 9999;
+  animation-name: title-text-appear;
+  animation-duration: 0.5s;
+}
+
+@media only screen and (max-width: 570px) {
+  .project-selector {
+    margin-bottom: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .project-selector:hover {
+    cursor: pointer;
+  }
+
+  .project-selector-coconut {
+    height: 30px !important;
+    width: 30px !important;
+    margin: auto;
+  }
+
+  .project-selector-coconut:hover {
+    transform: rotate(15deg)
+  }
+
+  .project-selector-text {
+    /* font-family: gilligan; */
+    text-align: center;
+    font-size: 75% !important;
+  }
+
+}
+
+/* .portfolio-background {
+  background-color: #f2f5de;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.25;
+} */
+
+.title-text {
+  /* font-family: gilligan; */
+  font-size: 200%;
+  width: 100%;
+  text-align: center;
+  /* animation-name: title-text-appear;
+  animation-duration: 0.5s; */
+  /* top: 5vh; */
+  /* top: -48vh;
+  left: 40vw; */
+  /* position: absolute; */
+}
+
+.p-text-container {
+  background-color: #f2f5de;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.p-text {
+  padding: 1%;
+  text-align: center;
+}
+
+.times:hover {
+  cursor: pointer;
+}
+
+.project-selector {
+  margin-bottom: 2vh;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+.project-selector:hover {
+  cursor: pointer;
+}
+
+.project-selector-coconut {
+  height: 60px;
+  width: 60px;
+  margin: auto;
+}
+
+.project-selector-coconut:hover {
+  transform: rotate(15deg)
+}
+
+
+.project-selector-text {
+  /* font-family: gilligan; */
+  text-align: center;
+  padding-top: 1%;
+}
+
+.project-display {
+  width: 100%;
+  /* border-left: 1px solid lightgrey; */
+  text-align: center;
+  margin-bottom: 3vh;
+}
+
+.project-name {
+  /* margin: 2vw; */
+  /* font-family: gilligan; */
+}
+
+.project-img {
+  max-width: 75%;
+  margin: 2vh auto 0 auto;
+}
+
+.project-languages {
+  margin: 0 auto;
+  max-width: 50%;
+  font-size: 75%;
+  color: #7D7D7D;
+}
+
+.project-links {
+  padding: 0.5vh 0;
+  font-size: 90%;
+}
+
+.project-link {
+  padding: 1vw;
+}
+
+.project-description {
+
+}
+
+
+
+@keyframes title-text-appear {
+  from {
+    /* top: 0vh; */
+    -ms-transform: scale(.25);
+    -webkit-transform: scale(.25);
+    transform: scale(.25);
+  }
+  to {
+    /* top: -48vh; */
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+.flamingo {
+  height: 20vh;
+  position: absolute;
+  top: 10vh;
+  left: -40vw;
+  animation-name: flamingo-enter, flamingo-walk;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flamingo-enter {
+  0% {
+    left: -20vw;
+  }
+  100% {
+    left: 10vw;
+  }
+}
+
+@keyframes flamingo-walk {
+  0% {
+    transform: rotate(-20deg);
+  }
+  10% {
+    transform: rotate(20deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+}
+
+.speech-bubble {
+  background: #efefef;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin: 0 auto 40px;
+    width: 5vw;
+    min-width: 75px;
+    max-width: 10vw;
+    padding: 15px;
+    position: absolute;
+    left: -35vw;
+    top: -2vh;
+}
+
+.speech-bubble::after {
+    border-left: 20px solid transparent;
+    border-top: 20px solid #efefef;
+    bottom: -20px;
+    content: "";
+    position: absolute;
+    right: 10px;
+}
+
+.speech-bubble p {
+    margin: 0 0 10px;
+}
+
+.speech-bubble p:last-of-type {
+    margin-bottom: 0;
+}
+
+
+#fish {
+  height: 5vh;
+  transform: rotate(-90deg);
+  position: absolute;
+  left: 20vw;
+  top: 44vh;
+  /* display: none; */
+  animation-name: fish-jump;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#fish-water {
+  position: absolute;
+  left: 20vw;
+  /* width: 5vw; */
+  top: 45vh;
+  color: white;
+  background-color: #2db8c2;
+  z-index: 1000;
+  line-height: 50%;
+  height: 10%;
+}
+
+.fish-jump {
+  animation-name: fish-jump;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fish-jump {
+  0% {
+    /* display: block; */
+    /* top: 0; */
+  }
+
+  25% {
+    top: 25vh;
+  }
+
+  50% {
+    top: 25vh;
+    /* transform: rotate(90deg); */
+  }
+  60% {
+    top: 25vh;
+    /* transform: rotate(90deg); */
+  }
+
+  100% {
+    display: none;
+    transform: rotate(90deg);
+    /* top: 100vh; */
+  }
+}
+
+
